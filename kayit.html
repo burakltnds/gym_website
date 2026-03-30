@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+        <h1>Kayıt Sayfası</h1>
+        <form name= "kayit_ol" action="php/kayit.php" method="POST">
+            <label> Kullanıcı Adı: </label>
+            <br> 
+            <input type="text" name="kullanici_adi" id="kullanici_adi" required>
+            <br>
+            <label>Email:</label>
+            <br>
+            <input type="email" name="email" id="email" required>
+            <br>
+            <label>Şifre:</label>
+            <br>
+            <input type="password" name="sifre" id="sifre" required>
+            <br> <br>
+            <input type="submit" value="Kayıt Ol">
+        </form>
+        <br>
+        <a href="index.html">Geri Dön</a>
+    </body>
+
+</html>
