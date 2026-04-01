@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head lang="tr">
+        <meta charset="utf-8">
+    
+    </head>
+
+
+    <body>
+        <h1 class="kurulum_baslik">Karakterinizi Şekillendirin</h1>
+        <p>Giriş yapmadan önce karakter özelliklerinizi belirleyiniz</p>
+
+        <form action="php/" method="POST" autocomplete="off" class="kurulum_sayfasi">
+                <label>Boy(cm) : </label>
+                <br>
+                <br>
+                <input type="number" required placeholder = " Örn : 180 ">
+                <br>
+                <br>
+                <label>Kilo(kg) : </label>
+                <br><br>
+                <input type="number" required placeholder=" Örn : 90">
+                <br><br>
+                <label>Hedef Kilo(kg) : </label>
+                <br><br>
+                <input type="number" required placeholder="Örn : 80">
+                <br><br>
+                <select name="tur" id="tur"> 
+                    <option value="bulker">Kilo Alma(Bulk)</option>
+                    <option value="cutter">Kilo Verme(Definasyon)</option>
+                    <option value="mainteiner">Kilo Koruma</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Değerleri Onayla">
+                
+        </form>
+    </body>
+
+</html>
