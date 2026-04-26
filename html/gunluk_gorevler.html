@@ -1,13 +1,20 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="../css/navbar.css">
+        <link rel="stylesheet" href="../css/veriables.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/gunluk_gorevler.css">
+    </head>
+    
     <body>
-         <header class="baslik">
-            <H1>GYM WEB</H1>
-        </header>
-
-        <hr>
-
-        <nav id="navbar">
-            <ul>
+        <nav id="navbar" class="navbar-ana">
+            <a href="index.html" class="baslik">
+              <img src="../asset/dumbbell.png" alt="Logo" class="navbar-logo">
+              <h1>GYM WEB</h1>
+            </a>
+            
+            <ul class="nav-linkler">
                 <li><a href="anasayfa.html">Anasayfa</a></li>
                 <li><a href="gunluk_gorevler.html">Görevler</a></li>
                 <li><a href="takvim.html">Takvim</a></li>
@@ -34,11 +41,12 @@
 
                 <br>
                 
-                <input type="radio" name="omuz" id="low"> Low 
-                <input type="radio" name="omuz" id="mid" > Mid
+                <div class="zorluk-grubu">           
+                    <input type="radio" name="omuz_lvl" id="o1"> <label for="o1">Low</label>
+                    <input type="radio" name="omuz_lvl" id="o2"> <label for="o2">Mid</label>            
+                    <input type="radio" name="omuz_lvl" id="o3"> <label for="o3">High</label>
+                </div>
 
-                <input type="radio" name="omuz" id=""> High               
-                <br>
                 <button type="submit">Antrenmanı Kaydet ve XP Kazan</button>
                 <hr>
                 </article>
@@ -58,15 +66,18 @@
 
                 <br>
                 
-                <input type="radio" name="kol">
-                <label >Low </label>
-                
-                <input type="radio" name="kol" id="">
-                <label >Mid</label>
-
-                <input type="radio" name="kol" id="">
-                <label >High</label> 
-                <br>              
+            
+                <div class="zorluk-grubu">
+            
+                    <input type="radio" name="kol_lvl" id="k1"> <label for="k1">Low</label>
+            
+                    <input type="radio" name="kol_lvl" id="k2"> <label for="k2">Mid</label>
+            
+                    <input type="radio" name="kol_lvl" id="k3"> <label for="k3">High</label>
+            
+            
+                </div>              
+            
                 <button type="submit">Antrenmanı Kaydet ve XP Kazan</button>
                 <hr>
                 </article>
@@ -85,15 +96,17 @@
 
                 <br>
                 
-                <input type="radio" name="gogus">
-                <label for="">Low </label>
-                
-                <input type="radio" name="gogus" id="">
-                <label for="">Mid</label>
-
-                <input type="radio" name="gogus" id="">
-                <label for="">High</label>               
-                <br>
+                <div class="zorluk-grubu">
+            
+                    <input type="radio" name="gogus_lvl" id="g1"> <label for="g1">Low</label>
+            
+                    <input type="radio" name="gogus_lvl" id="g2"> <label for="g2">Mid</label>
+            
+                    <input type="radio" name="gogus_lvl" id="g3"> <label for="g3">High</label>
+            
+           
+                </div>
+           
                 <button type="submit">Antrenmanı Kaydet ve XP Kazan</button>
                 <hr>
                 </article>
@@ -114,14 +127,13 @@
 
                 <br>
                 
-                <input type="radio" name="karin">
-                <label for="">Low </label>
                 
-                <input type="radio" name="karin" id="">
-                <label for="">Mid</label>
-
-                <input type="radio" name="karin" id="">
-                <label for="">High</label>               
+                <div class="zorluk-grubu">
+                    <input type="radio" name="ka_lvl" id="ka1"> <label for="ka1">Low</label>
+                    <input type="radio" name="ka_lvl" id="ka2"> <label for="ka2">Mid</label>
+                    <input type="radio" name="ka_lvl" id="ka3"> <label for="ka3">High</label>                
+                </div>            
+                
                 <br>
                 <button type="submit">Antrenmanı Kaydet ve XP Kazan</button>
                 <hr>
@@ -140,15 +152,11 @@
 
                 <br>
                 
-                <input type="radio" name="sirt">
-                <label for="">Low </label>
-                
-                <input type="radio" name="sirt" id="">
-                <label for="">Mid</label>
-
-                <input type="radio" name="sirt" id="">
-                <label for="">High</label>    
-                <br>
+                <div class="zorluk-grubu">
+                    <input type="radio" name="sirt_lvl" id="si1"> <label for="si1">Low</label>
+                    <input type="radio" name="sirt_lvl" id="si2"> <label for="si2">Mid</label>
+                    <input type="radio" name="sirt_lvl" id="si3"> <label for="si3">High</label>
+                </div>
                 <button type="submit">Antrenmanı Kaydet ve XP Kazan</button>          
                 <hr>
                 </article>
@@ -167,21 +175,38 @@
 
                 <br>
                 
-                <input type="radio" name="bacak">
-                <label for="">Low </label>
-                
-                <input type="radio" name="bacak" id="">
-                <label for="">Mid</label>
-
-                <input type="radio" name="bacak" id="">
-                <label for="">High</label>
-                <br>
-                <button type="submit">Antrenmanı Kaydet ve XP Kazan</button>               
+                <div class="zorluk-grubu">
+                    <input type="radio" name="b_lvl" id="b1"> <label for="b1">Low</label>
+                    <input type="radio" name="b_lvl" id="b2"> <label for="b2">Mid</label>
+                    <input type="radio" name="b_lvl" id="b3"> <label for="b3">High</label>
+                </div>
+                <button type="button" onclick="xpBildirimiGoster('ANTRENMAN KAYDEDİLDİ', '+50 XP Kazandın!')">
+    Antrenmanı Kaydet ve XP Kazan
+</button>               
                 <hr>
                 </article>
            
             </article>
         </section>
 
+        <footer class="ana-footer">   
+          <h2>İLETİŞİM</h2>  
+          <div class="footer-ikon-grubu">
+            <a href="mailto:burakaltundas52@gmail.com" class="footer-link">   
+              <img src="../asset/gmail.png" alt="Gmail">  
+            </a>   
+            <a href="https://github.com/burakltnds" target="_blank" class="footer-link">
+              <img src="../asset/Github.png" alt="Github">
+            </a>
+            <a href="https://linkedin.com/burakltnds" target="_blank" class="footer-link">
+              <img src="../asset/linkedin.png" alt="Linkedin">
+            </a>
+          </div>    
+          <p class="telif-yazisi">&copy; 2026 GYM WEB | Burak</p>
+
+        </footer>
+        
+        <script src="../js/main.js"></script>
+        <script src="../js/gorevler.js"></script>
     </body>
 </html>

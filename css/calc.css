@@ -1,0 +1,132 @@
+.hesap-kart {
+    background-color: var(--bg-panel);
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--border-notr);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hesap-kart:hover {
+    border-color: var(--accent-warm);
+    transform: translateY(-5px);
+}
+
+.hesap-kart h3 {
+    color: var(--accent-warm);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--notr-gri);
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* FORM ELEMANLARI */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+input[type="number"] {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-notr);
+    color: var(--text-primary);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.2);
+}
+
+/* HESAPLA BUTONU */
+button {
+    background: linear-gradient(135deg, var(--accent-warm), #ff8c00);
+    color: black;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px var(--accent-warm);
+    background: var(--accent-gold);
+}
+
+/* SONUÇ ALANI */
+#bmrSonuc, #bmiSonuc, #fatSonuc {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: var(--bg-main);
+    border-left: 4px solid var(--accent-gold);
+    border-radius: 5px;
+}
+
+#bmrSonuc p, #bmiSonuc p, #fatSonuc p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+span {
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.cinsiyet-grubu {
+    display: flex;
+    flex-direction: column; /* Alt alta ama düzenli olsunlar */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Buton ve metni yan yana getir */
+.radio-item {
+    display: flex;
+    align-items: center; /* Dikeyde tam ortalar */
+    gap: 10px; /* Buton ile yazı arasındaki boşluk */
+    cursor: pointer;
+}
+
+/* Radio butonun o çirkin varsayılan boşluklarını temizle */
+input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--accent-warm); /* Bizim turuncudan olsun */
+}
+
+/* Etiketlere de el atalım */
+.radio-item label {
+    margin: 0;
+    font-weight: 500;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hesap-kart {
+        width: 95%;
+        padding: 20px;
+    }
+}

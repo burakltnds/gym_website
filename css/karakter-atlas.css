@@ -1,0 +1,77 @@
+/* 1. ATLAS KONTEYNERİNİ SINIRLA (DEVASA DURMASIN) */
+.karakter-atlas-konteynir {
+    display: flex;
+    justify-content: space-around; /* Ön ve Arka yan yana dursun */
+    gap: 30px; /* Aralarında makul bir mesafe */
+    max-width: 600px; /* Tüm konteynerin genişliğini sınırla (ÖNEMLİ!) */
+    margin: 0 auto; /* Eğer konteyner sol panelden daha darsa ortalasın */
+    padding: 20px;
+    background-color: var(--bg-panel); /* Nötr koyu panel */
+    border-radius: 15px;
+    border: 1px solid var(--border-notr);
+}
+
+/* 2. TEKİL GÖRÜNÜMLER (ÖN/ARKA) */
+.vucut-on, .vucut-arka {
+    flex: 1; /* Eşit alan kaplasınlar */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Başlık ve SVG'yi ortala */
+    max-width: 250px; /* Her bir vücudun maksimum genişliği */
+}
+
+/* 3. BAŞLIKLAR (ÖN/ARKA GÖRÜNÜM YAZISI) */
+.vucut-on h3, .vucut-arka h3 {
+    font-size: 1rem; /* Başlığı küçültelim, barlarla aynı hizada olsun */
+    color: var(--accent-warm); /* Sıcak turuncu */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    border-left: none; /* Genel h1/h2 çizgilerini burada kaldıralım */
+    padding-left: 0;
+}
+
+/* 4. SVG'Yİ KONTROL ET (ASIL BÜYÜKLÜK BURADA) */
+.vucut-svg {
+    width: 100%; /* Konteynerinin (%250px) genişliğini doldurur */
+    height: auto; /* Oranı bozmaz */
+}
+
+/* 5. SVG KAS PARÇALARI (HOVER EFEKTİ SANA KALMIŞ, BURADA TERTEMİZ TUTALIM) */
+.kas-parcasi {
+    fill: #2a2a2a; /* Başlangıçta nötr koyu gri */
+    stroke: var(--accent-warm); /* Turuncu sınırlar */
+    stroke-width: 1;
+    transition: all 0.3s ease;
+}
+
+/* KAFALAR (ONLAR KAS DEĞİL, DEĞİŞMESİN) */
+#kafa_on, #kafa_arka {
+    fill: #333;
+}
+
+.kas-parcasi {
+    cursor: pointer;
+    transition: fill 0.3s ease, filter 0.3s ease;
+}
+
+.kas-parcasi:hover {
+    fill: var(--accent-gold) !important; /* Üzerine gelince altın sarısı parlasın */
+    filter: drop-shadow(0 0 8px var(--accent-gold));
+}
+
+/* Tooltip (Bilgi Kutucuğu) Stili */
+#vucut-tooltip {
+    position: absolute;
+    display: none; /* Başlangıçta gizli */
+    background: rgba(20, 20, 20, 0.95);
+    color: var(--accent-gold);
+    padding: 10px 15px;
+    border: 1px solid var(--accent-warm);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    pointer-events: none; /* Kutucuk fareye engel olmasın */
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    white-space: nowrap;
+}

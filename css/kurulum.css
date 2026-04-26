@@ -1,0 +1,91 @@
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.kurulum_baslik {
+    color: var(--accent-warm);
+    text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.2rem;
+}
+
+p {
+    text-align: center;
+    color: var(--text-dim);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* ANA FORM PANELİ */
+.kurulum_sayfasi {
+    background-color: var(--bg-panel);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--border-notr);
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL VE INPUT DÜZENİ */
+.kurulum_sayfasi label {
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.kurulum_sayfasi input[type="number"],
+.kurulum_sayfasi select {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-notr);
+    color: var(--text-primary);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.kurulum_sayfasi input:focus,
+.kurulum_sayfasi select:focus {
+    border-color: var(--accent-warm);
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.2);
+}
+
+/* ONAY BUTONU */
+.kurulum_sayfasi input[type="submit"] {
+    background: linear-gradient(135deg, var(--accent-warm), #ff8c00);
+    color: black;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.kurulum_sayfasi input[type="submit"]:hover {
+    background: var(--accent-gold);
+    box-shadow: 0 0 20px var(--accent-gold);
+    transform: scale(1.03);
+}
+
+/* FOOTER'I EN ALTA İT */
+.ana-footer {
+    margin-top: auto;
+    width: 100%;
+}

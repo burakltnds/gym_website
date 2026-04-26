@@ -1,0 +1,105 @@
+/*---------- NAVBAR DESKTOP ----------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.navbar-ana {
+    width: 100%; /* Sayfayı tam kaplasın */
+    position: fixed; /* Ya da sticky kullanıyorsan kalsın ama fixed daha garantidir */
+    top: 0;
+    left: 0;
+    background-color: var(--bg-panel);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 5%; 
+    border-bottom: 3px solid var(--accent-warm);
+    position: static;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* Başlık ve Logo Grubu */
+.baslik {
+    display: flex;
+    align-items: center; /* DOĞRUSU BU: Dikeyde tam ortalar */
+    gap: 15px;
+    text-decoration: none;
+}
+
+.navbar-logo {
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-main);
+    border: 2px solid var(--accent-warm);
+    border-radius: 80%;
+    padding: 7px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Çerçevenin içindeki resim ayarı */
+.navbar-logo img {
+    max-width: 100%; /* Çerçevenin dışına taşmaz */
+    height: auto;
+    filter: drop-shadow(0 0 5px var(--accent-warm));
+}
+
+.baslik h1 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Linkler Grubu */
+.nav-linkler {
+    display: flex;
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Boşluğu sadece buradan yönetelim */
+}
+
+.nav-linkler a {
+    color: var(--text-dim); 
+    text-decoration: none;
+    /* margin-left: 30px;  <-- BUNU SİLDİK, gap yetiyor */
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover ve After efektlerin harika, onlara dokunmuyorum */
+
+/*---------- MOBIL ----------*/
+
+@media (max-width: 768px) {
+    .navbar-ana {
+        flex-direction: row; /* Mobilde de yan yana kalsın dersen 'row' yap */
+        justify-content: space-between;
+        padding: 10px 5%;
+    }
+
+    .nav-linkler {
+        gap: 10px; /* Mobilde linkleri sıkıştır */
+    }
+
+    .nav-linkler a {
+        font-size: 0.7rem; /* Yazıyı küçült ki sığsın */
+    }
+
+    .baslik h1 {
+        display: none; /* Mobilde sadece logo kalsın dersen çok şık durur */
+    }
+}

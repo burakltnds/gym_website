@@ -1,0 +1,82 @@
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center; /* Formu tam ortaya sabitler */
+    margin: 0;
+}
+
+#giris_sayfasi {
+    color: var(--accent-warm);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+}
+
+/* GİRİŞ FORMU PANELİ */
+form.giris_sayfasi {
+    background-color: var(--bg-panel);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--border-notr);
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+form.giris_sayfasi label {
+    color: var(--text-dim);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+form.giris_sayfasi input[type="text"],
+form.giris_sayfasi input[type="password"] {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-notr);
+    color: var(--text-primary);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: 0.3s;
+}
+
+form.giris_sayfasi input:focus {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 8px var(--accent-gold);
+}
+
+/* GİRİŞ BUTONU */
+form.giris_sayfasi input[type="submit"] {
+    background: linear-gradient(135deg, var(--accent-warm), #ff8c00);
+    color: black;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+form.giris_sayfasi input[type="submit"]:hover {
+    background: var(--accent-gold);
+    box-shadow: 0 0 20px var(--accent-gold);
+    transform: scale(1.02);
+}
+
+/* FOOTER DÜZENİ */
+.ana-footer {
+    width: 100%;
+    margin-top: auto; /* Sayfa az içerikli olduğu için en alta iter */
+}
