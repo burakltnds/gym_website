@@ -1,5 +1,4 @@
 function bmrHesapla() {
-    // BMR kartının içindeki inputları nokta atışı yakalıyoruz
     const bmrForm = document.getElementById('bmrForm');
     const boy = parseFloat(bmrForm.querySelector('#boy').value);
     const kilo = parseFloat(bmrForm.querySelector('#kilo').value);
@@ -19,14 +18,12 @@ function bmrHesapla() {
     }
 
     document.getElementById('bmrDeger').innerText = Math.round(bmr);
-    // Sonuç gelince kutuyu biraz parlatalım
     document.getElementById('bmrSonuc').style.borderColor = "var(--accent-gold)";
 }
 
-// --- BMI HESAPLAYICI ---
 function bmiHesapla() {
     const bmiForm = document.getElementById('bmiForm');
-    const boy = parseFloat(bmiForm.querySelector('#boy').value) / 100; // cm -> metre
+    const boy = parseFloat(bmiForm.querySelector('#boy').value) / 100;
     const kilo = parseFloat(bmiForm.querySelector('#kilo').value);
 
     if (!boy || !kilo) {
@@ -47,7 +44,6 @@ function bmiHesapla() {
     document.getElementById('bmiDurum').innerText = durum;
 }
 
-// --- YAĞ ORANI HESAPLAYICI (Donanma Formülü) ---
 function yagHesapla() {
     const boy = parseFloat(document.getElementById('fat_boy').value);
     const bel = parseFloat(document.getElementById('fat_bel').value);
@@ -58,8 +54,6 @@ function yagHesapla() {
         return;
     }
 
-    // Yaklaşık bir formül (Erkekler için temel Donanma formülü)
-    // 495 / (1.0324 - 0.19077 * log10(bel - boyun) + 0.15456 * log10(boy)) - 450
     let yagOrani = 495 / (1.0324 - 0.19077 * Math.log10(bel - boyun) + 0.15456 * Math.log10(boy)) - 450;
     
     yagOrani = yagOrani.toFixed(1);

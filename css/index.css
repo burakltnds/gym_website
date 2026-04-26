@@ -1,45 +1,43 @@
 body {
-    background-color: var(--bg-main);
-    color: var(--text-primary);
+    background-color: var(--bg-main); 
+    color: var(--text-primary);      
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
-    justify-content: center; /* Ekranın tam ortasına çiviler */
+    justify-content: center;
     margin: 0;
     font-family: 'Inter', sans-serif;
     text-align: center;
+    overflow: hidden; 
 }
 
-/* Sayfaya hafif bir derinlik katalım */
 body::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255,107,0,0.05) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(74, 222, 128, 0.05) 0%, rgba(255,255,255,0) 70%);
     z-index: -1;
 }
 
 h1 {
-    color: var(--accent-warm);
-    font-size: 4rem; /* Devasa bir başlık */
+    color: var(--text-primary); 
+    font-size: 3.5rem; 
+    font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 10px;
-    margin-bottom: 10px;
-    text-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
-    animation: glow 2s ease-in-out infinite alternate;
+    letter-spacing: -2px; 
+    margin-bottom: 15px;
 }
 
 p {
     color: var(--text-dim);
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    opacity: 0.8;
+    font-size: 1.1rem;
+    margin-bottom: 45px;
+    font-weight: 500;
+    max-width: 500px;
 }
 
-/* BUTONLARIN YAN YANA DÜZENİ */
 .buton-grubu {
     display: flex;
     gap: 20px;
@@ -47,52 +45,60 @@ p {
 
 .button {
     display: inline-block;
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    font-weight: 900;
+    padding: 16px 40px;
+    font-size: 1rem;
+    font-weight: 800;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    letter-spacing: 2px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-align: center;
+    min-width: 180px; 
 }
 
-/* GİRİŞ YAP BUTONU (TURUNCU PARLAYAN) */
 .button:first-of-type {
-    background: linear-gradient(135deg, var(--accent-warm), #ff8c00);
-    color: black;
-    box-shadow: 0 0 15px rgba(255, 107, 0, 0.3);
+    background-color: var(--accent-warm); 
+    color: var(--text-primary) !important; 
+    border: 2px solid var(--accent-warm);
+    box-shadow: 0 6px 15px rgba(74, 222, 128, 0.3);
 }
 
-/* KAYIT OL BUTONU (SİYAH/GÜMÜŞ ÇERÇEVELİ) */
-.button:last-of-type {
-    background: transparent;
-    color: var(--text-primary);
-    border: 2px solid var(--border-notr);
-}
-
-/* HOVER EFEKTLERİ */
 .button:first-of-type:hover {
-    background: var(--accent-gold);
-    transform: scale(1.1);
-    box-shadow: 0 0 30px var(--accent-gold);
+    background-color: var(--accent-gold); 
+    border-color: var(--accent-gold);
+    color: var(--text-primary) !important; 
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
+.button:last-of-type,
+a[href*="kayit"] {
+    background-color: transparent;
+    color: var(--text-primary) !important; 
+    border: 2px solid var(--text-primary); 
 }
 
 .button:last-of-type:hover {
-    border-color: var(--accent-warm);
-    color: var(--accent-warm);
-    transform: scale(1.1);
+    background-color: var(--text-primary); 
+    color: var(--accent-warm) !important; 
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(51, 65, 85, 0.2);
 }
 
-/* BAŞLIK PARLAMA ANİMASYONU */
-@keyframes glow {
-    from { text-shadow: 0 0 10px rgba(255, 107, 0, 0.4); }
-    to { text-shadow: 0 0 30px rgba(255, 107, 0, 0.8), 0 0 40px rgba(255, 107, 0, 0.2); }
-}
-
-/* MOBİL AYARI */
 @media (max-width: 600px) {
-    h1 { font-size: 2.5rem; }
-    .buton-grubu { flex-direction: column; width: 80%; }
-    .button { width: 100%; }
+    h1 { 
+        font-size: 2.2rem; 
+        letter-spacing: -1px; 
+    }
+    .buton-grubu { 
+        flex-direction: column; 
+        width: 85%; 
+        gap: 15px; 
+        margin: 0 auto; 
+    }
+    .button { 
+        width: 100%; 
+        min-width: auto; 
+    }
 }

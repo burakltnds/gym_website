@@ -1,132 +1,145 @@
 .hesap-kart {
-    background-color: var(--bg-panel);
+    background-color: var(--bg-panel); 
     width: 90%;
     max-width: 600px;
     margin: 40px auto;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 35px 30px;
+    border-radius: 20px; 
     border: 1px solid var(--border-notr);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04); 
+    transition: transform 0.4s ease, border-color 0.4s ease;
 }
 
 .hesap-kart:hover {
-    border-color: var(--accent-warm);
+    border-color: var(--accent-warm); 
     transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(74, 222, 128, 0.1); 
 }
 
 .hesap-kart h3 {
-    color: var(--accent-warm);
+    color: var(--text-primary); 
     text-align: center;
     margin-bottom: 25px;
-    font-size: 1.5rem;
-    border-bottom: 2px solid var(--notr-gri);
-    padding-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    border-bottom: 2px solid var(--border-notr); 
+    padding-bottom: 15px;
     text-transform: uppercase;
+    letter-spacing: -0.5px;
 }
 
-/* FORM ELEMANLARI */
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px; 
 }
 
 label {
-    font-weight: bold;
+    font-weight: 700;
     color: var(--text-dim);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
 }
 
+
 input[type="number"] {
-    background-color: var(--bg-main);
-    border: 1px solid var(--border-notr);
+    background-color: #ffffff; 
+    border: 2px solid var(--border-notr);
     color: var(--text-primary);
-    padding: 12px;
-    border-radius: 8px;
+    padding: 14px;
+    border-radius: 10px;
     font-size: 1rem;
     outline: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
 }
 
 input[type="number"]:focus {
-    border-color: var(--accent-gold);
-    box-shadow: 0 0 8px rgba(255, 204, 0, 0.2);
-}
-
-/* HESAPLA BUTONU */
-button {
-    background: linear-gradient(135deg, var(--accent-warm), #ff8c00);
-    color: black;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: 900;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 20px var(--accent-warm);
-    background: var(--accent-gold);
-}
-
-/* SONUÇ ALANI */
-#bmrSonuc, #bmiSonuc, #fatSonuc {
-    margin-top: 25px;
-    padding: 15px;
-    background-color: var(--bg-main);
-    border-left: 4px solid var(--accent-gold);
-    border-radius: 5px;
-}
-
-#bmrSonuc p, #bmiSonuc p, #fatSonuc p {
-    margin: 5px 0;
-    font-size: 1.1rem;
-}
-
-span {
-    color: var(--accent-gold);
-    font-weight: bold;
+    border-color: var(--accent-gold); 
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1); 
 }
 
 .cinsiyet-grubu {
     display: flex;
-    flex-direction: column; /* Alt alta ama düzenli olsunlar */
-    gap: 10px;
-    margin-top: 10px;
+    flex-direction: column; 
+    gap: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-/* Buton ve metni yan yana getir */
 .radio-item {
     display: flex;
-    align-items: center; /* Dikeyde tam ortalar */
-    gap: 10px; /* Buton ile yazı arasındaki boşluk */
+    align-items: center; 
+    gap: 12px; 
     cursor: pointer;
 }
 
-/* Radio butonun o çirkin varsayılan boşluklarını temizle */
 input[type="radio"] {
     margin: 0;
     cursor: pointer;
-    accent-color: var(--accent-warm); /* Bizim turuncudan olsun */
+    accent-color: var(--accent-warm);
+    transform: scale(1.3);
 }
 
-/* Etiketlere de el atalım */
 .radio-item label {
     margin: 0;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-primary);
     cursor: pointer;
+    text-transform: none; 
+    font-size: 1rem;
 }
 
-/* RESPONSIVE */
+
+button {
+    background-color: var(--accent-warm); 
+    color: var(--text-primary) !important; 
+    border: 2px solid var(--accent-warm);
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--accent-gold); 
+    border-color: var(--accent-gold);
+    color: var(--text-primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
+#bmrSonuc, #bmiSonuc, #fatSonuc {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff; 
+    border-left: 6px solid var(--accent-warm); 
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03); 
+    display: block; 
+}
+
+
+#bmrSonuc p, #bmiSonuc p, #fatSonuc p {
+    margin: 8px 0;
+    font-size: 1.05rem;
+    color: var(--text-dim);
+    font-weight: 500;
+}
+
+#bmrSonuc span, #bmiSonuc span, #fatSonuc span {
+    color: var(--text-primary); 
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
 @media (max-width: 768px) {
     .hesap-kart {
         width: 95%;
-        padding: 20px;
+        padding: 25px 20px;
     }
 }

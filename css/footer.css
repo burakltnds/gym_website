@@ -1,64 +1,61 @@
 .ana-footer {
     background-color: var(--bg-panel);
-    padding: 30px 0;
+    padding: 40px 0 25px 0;
     margin-top: 60px;
-    border-top: 2px solid var(--accent-warm);
+    border-top: 1px solid var(--border-notr); 
     text-align: center;
 }
 
 .ana-footer h2 {
-    color: var(--accent-warm);
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    border: none; /* Başlıktaki çizgiyi burada kapattık */
-    padding: 0;
+    color: var(--text-primary); 
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
-/* İKONLARI YAN YANA DİZEN GRUP */
 .footer-ikon-grubu {
     display: flex;
-    justify-content: center; /* Yan yana ortalar */
-    gap: 25px; /* İkonların arasındaki mesafe */
+    justify-content: center; 
+    gap: 20px; 
     align-items: center;
 }
 
-/* TEKİL İKON LİNKLERİ */
 .footer-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: var(--bg-main);
+    width: 45px; 
+    height: 45px;
+    background-color: #ffffff; 
     border: 1px solid var(--border-notr);
     border-radius: 50%;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
 .footer-link img {
-    width: 24px; /* İkonların boyutu (Standartlaştırdık) */
+    width: 20px; 
     height: auto;
-    opacity: 0.8;
-    filter: grayscale(1); /* Başlangıçta hepsi gri olsun, hoverda parlasın */
-    transition: 0.3s;
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
 }
 
-/* HOVER: KOR GİBİ PARLAMA */
 .footer-link:hover {
-    border-color: var(--accent-gold);
-    transform: translateY(-5px); /* Hafif yukarı zıplama */
-    box-shadow: 0 0 15px var(--accent-gold);
+    border-color: var(--accent-gold); 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px rgba(56, 189, 248, 0.2); 
 }
 
 .footer-link:hover img {
-    opacity: 1;
-    filter: grayscale(0) drop-shadow(0 0 5px var(--accent-gold));
+    opacity: 1; 
+    filter: grayscale(0%); 
 }
 
 .telif-yazisi {
-    margin-top: 25px;
-    font-size: 0.75rem;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
     color: var(--text-dim);
-    opacity: 0.5;
 }

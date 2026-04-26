@@ -6,20 +6,23 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="../../css/footer.css">
         <link rel="stylesheet" href="../../css/giris.css">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/veriables.css">
     </head>
     <body>
-        <form action="php/giris.php" class="giris_sayfasi" autocomplete="on">
-            <label>Kullanıcı Adı:</label>
-            <br> 
-            <input type="text" required>
-            <br>
-            <label>Şifre:</label>
-            <br>
-            <input type="password" id="password_giris" required>
-            <br><br>
-            <input type="submit" value = "Giriş Yap">
+        <form action="../../php/giris.php" class="giris_sayfasi" autocomplete="on" method="post">        
+          <label>Kullanıcı Adı:</label>       
+          <br>          
+          <input type="text" name="kullanici_adi" required>        
+          <br>         
+          <label>Şifre:</label>       
+          <br>      
+          <input type="password" name="sifre" id="password_giris" required>      
+          <br><br>       
+          <input type="submit" value = "Giriş Yap">      
         </form>
-        <footer class="ana-footer">   
+        <footer class="ana-footer">
+             
           <h2>İLETİŞİM</h2>  
           <div class="footer-ikon-grubu">
             <a href="mailto:burakaltundas52@gmail.com" class="footer-link">   

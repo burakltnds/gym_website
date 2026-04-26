@@ -1,87 +1,89 @@
-/* TAKVİM SAYFASI ANA DÜZENİ */
 .antrenman-gunlugu {
     width: 90%;
     max-width: 900px;
     margin: 40px auto;
-    padding: 20px;
-    background-color: var(--bg-panel);
-    border-radius: 15px;
+    padding: 30px;
+    background-color: var(--bg-panel); 
+    border-radius: 16px;
     border: 1px solid var(--border-notr);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 }
 
 .antrenman-gunlugu h2 {
-    color: var(--accent-gold);
+    color: var(--text-primary); 
     text-align: center;
     margin-bottom: 30px;
-    letter-spacing: 2px;
+    font-weight: 800;
     text-transform: uppercase;
 }
 
-/* AKTİVİTE HARİTASI (GITHUB TARZI) */
 .takvim-izgarasi {
     text-align: center;
     background-color: var(--bg-main);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
     margin-bottom: 40px;
+    border: 1px solid var(--border-notr);
 }
 
 .takvim-izgarasi p {
     color: var(--text-dim);
     font-size: 0.9rem;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
-/* Küçük Kareler İçin Alan */
 .gun-kutucuklari {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 6px;
     justify-content: center;
 }
 
-/* JavaScript ile eklenecek karelerin stili */
 .gun-kutu {
-    width: 15px;
-    height: 15px;
-    background-color: #2d2d2d; /* Boş gün */
-    border-radius: 2px;
-    transition: 0.3s;
+    width: 16px;
+    height: 16px;
+    background-color: #e2e8f0; 
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
 .gun-kutu.aktif {
-    background-color: var(--accent-warm);
-    box-shadow: 0 0 5px var(--accent-warm);
+    background-color: var(--accent-warm); 
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.4);
+    transform: scale(1.1); 
 }
 
-/* SON AKTİVİTELER LİSTESİ */
 .gunluk-liste h3 {
-    color: var(--accent-warm);
+    color: var(--text-primary);
     margin-bottom: 20px;
-    font-size: 1.3rem;
-    border-left: 4px solid var(--accent-warm);
-    padding-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-left: 5px solid var(--accent-warm);
+    padding-left: 15px;
 }
 
 .gunluk-item {
-    background-color: var(--bg-main);
-    padding: 15px;
-    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 12px;
     margin-bottom: 15px;
-    border: 1px solid transparent;
-    transition: 0.3s;
+    border: 1px solid var(--border-notr);
+    transition: 0.3s ease;
 }
 
 .gunluk-item:hover {
     border-color: var(--accent-gold);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
 }
 
 .gunluk-item time {
     display: block;
-    color: var(--accent-gold);
+    color: var(--accent-gold); 
     font-weight: 800;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
 }
 
 .gunluk-item ul {
@@ -91,20 +93,25 @@
 
 .gunluk-item li {
     color: var(--text-primary);
-    margin-bottom: 5px;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--border-notr);
     display: flex;
     justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+.gunluk-item li:last-child {
+    border-bottom: none;
 }
 
 .xp {
-    color: #4ade80; /* XP kazancı yeşil kalsın, gelişim hissi verir */
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    color: #16a34a;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
 }
 
-/* HR TEMİZLİĞİ */
 hr {
     border: none;
-    border-bottom: 1px solid var(--border-notr);
-    margin: 30px 0;
+    border-bottom: 2px solid var(--border-notr);
+    margin: 35px 0;
 }

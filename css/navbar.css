@@ -1,34 +1,26 @@
-/*---------- NAVBAR DESKTOP ----------*/
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
 .navbar-ana {
-    width: 100%; /* Sayfayı tam kaplasın */
-    position: fixed; /* Ya da sticky kullanıyorsan kalsın ama fixed daha garantidir */
-    top: 0;
-    left: 0;
-    background-color: var(--bg-panel);
+    width: 100%;
+    background-color: var(--bg-panel); 
     display: flex;
     justify-content: space-between; 
     align-items: center;
     padding: 10px 5%; 
-    border-bottom: 3px solid var(--accent-warm);
-    position: static;
+    border-bottom: 3px solid black;
+    position: sticky; 
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
 }
 
-/* Başlık ve Logo Grubu */
 .baslik {
     display: flex;
-    align-items: center; /* DOĞRUSU BU: Dikeyde tam ortalar */
+    align-items: center; 
     gap: 15px;
     text-decoration: none;
 }
@@ -36,9 +28,9 @@
 .navbar-logo {
     width: 45px;
     height: 45px;
-    background-color: var(--bg-main);
-    border: 2px solid var(--accent-warm);
-    border-radius: 80%;
+    background-color: var(--bg-main); 
+    border: 2px solid black;
+    border-radius: 50%; 
     padding: 7px;
     transition: 0.3s;
     display: flex;
@@ -46,11 +38,9 @@
     align-items: center;
 }
 
-/* Çerçevenin içindeki resim ayarı */
 .navbar-logo img {
-    max-width: 100%; /* Çerçevenin dışına taşmaz */
+    max-width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 5px var(--accent-warm));
 }
 
 .baslik h1 {
@@ -60,19 +50,17 @@
     letter-spacing: 1px;
 }
 
-/* Linkler Grubu */
 .nav-linkler {
     display: flex;
     list-style: none; 
     margin: 0;
     padding: 0;
-    gap: 20px; /* Boşluğu sadece buradan yönetelim */
+    gap: 20px;
 }
 
 .nav-linkler a {
-    color: var(--text-dim); 
+    color: var(--text-dim);
     text-decoration: none;
-    /* margin-left: 30px;  <-- BUNU SİLDİK, gap yetiyor */
     font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -80,26 +68,26 @@
     position: relative;
 }
 
-/* Hover ve After efektlerin harika, onlara dokunmuyorum */
-
-/*---------- MOBIL ----------*/
+.nav-linkler a:hover {
+    color: var(--accent-gold);
+}
 
 @media (max-width: 768px) {
     .navbar-ana {
-        flex-direction: row; /* Mobilde de yan yana kalsın dersen 'row' yap */
+        flex-direction: row; 
         justify-content: space-between;
         padding: 10px 5%;
     }
 
     .nav-linkler {
-        gap: 10px; /* Mobilde linkleri sıkıştır */
+        gap: 10px;
     }
 
     .nav-linkler a {
-        font-size: 0.7rem; /* Yazıyı küçült ki sığsın */
+        font-size: 0.7rem;
     }
 
     .baslik h1 {
-        display: none; /* Mobilde sadece logo kalsın dersen çok şık durur */
+        display: none; 
     }
 }
