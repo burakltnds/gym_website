@@ -15,7 +15,7 @@
 <body>
      
         <nav id="navbar" class="navbar-ana">
-            <a href="index.html" class="baslik">
+            <a href="anasayfa.php" class="baslik">
               <img src="../asset/dumbbell.png" alt="Logo" class="navbar-logo">
               <h1>GYM WEB</h1>
             </a>
@@ -31,13 +31,11 @@
     
   
       <article class="hesap-kart">
-        <h3>🔥 BMR Hesaplayıcı (Mifflin-St Jeor)</h3>
-        <form id="bmrForm">
-                        <label>Boy (cm):</label>
+        <h3>BMR Hesaplayıcı</h3>
+        <form id="bmrForm">      
+            <label>Boy (cm):</label>
             <input type="number" id="boy" placeholder="Örn: 180" required>
-        
-           
-        
+
             <label>Kilo (kg):</label>
             <input type="number" id="kilo" placeholder="Örn: 80" required>
             
@@ -46,7 +44,6 @@
           
             <label>Cinsiyet:</label>
             <div class="cinsiyet-grubu">
-    
                 <div class="radio-item">
     
                     <input type="radio" name="gender" id="erkek" value="male" checked>
@@ -58,15 +55,11 @@
                 <div class="radio-item">
     
                     <input type="radio" name="gender" id="kadin" value="female">
-    
-                    <label for="kadin">Kadın</label>
-    
-                </div>
 
+                    <label for="kadin">Kadın</label>
+                </div>
             </div>
-        
-        
-        
+                
             <button type="button" onclick="bmrHesapla()">BMR Hesapla</button>
         </form>
     
@@ -77,52 +70,44 @@
 
 
     <article class="hesap-kart">
-        <h3>📊 BMI Hesaplayıcı</h3>
+        <h3>BMI Hesaplayıcı</h3>
         <form id="bmiForm">
+
             <label>Boy (cm):</label>
-            <input type="number" id="boy" placeholder="Örn: 180" required>
-        
-            
+            <input type="number" id="boy" placeholder="Örn: 180" required>    
+
             <label>Kilo (kg):</label>
             <input type="number" id="kilo" placeholder="Örn: 80" required>
-        
-           
         
             <button type="button" onclick="bmiHesapla()">BMI Hesapla</button>
         </form>
     
         <div id="bmiSonuc">
-            <p>Sonuç: <span id="bmiDeger">--</span></p>
-            <p>Durum: <span id="bmiDurum">--</span></p>
+            <p>Sonuç: <span id="bmiDeger"></span></p>
+            <p>Durum: <span id="bmiDurum"></span></p>
         </div>
     </article>
 
 
     <article class="hesap-kart">
-    <h3>🔍 Vücut Yağ Oranı Hesaplayıcı</h3>
+    <h3>Vücut Yağ Oranı Hesaplayıcı</h3>
     
     <form id="fatForm">
         <label>Boy (cm):</label>
         <input type="number" id="fat_boy" placeholder="180" required>
         
-       
-        
         <label>Bel Çevresi (cm)</small>:</label>
         <input type="number" id="fat_bel" placeholder="85" required>
         
-       
-        
         <label>Boyun Çevresi (cm):</label>
         <input type="number" id="fat_boyun" placeholder="40" required>
-        
-        
         
         <button type="button" onclick="yagHesapla()">Yağ Oranını Bul</button>
     </form>
     
     <div id="fatSonuc">
-        <p>Vücut Yağ Oranı: %<span id="fatDeger">--</span></p>
-        <p>Kategori: <span id="fatDurum">--</span></p>
+        <p>Vücut Yağ Oranı: %<span id="fatDeger"></span></p>
+        <p>Kategori: <span id="fatDurum"></span></p>
     </div>
 </article>
 
@@ -139,7 +124,7 @@
               <img src="../asset/linkedin.png" alt="Linkedin">
             </a>
           </div>    
-          <p class="telif-yazisi">&copy; 2026 GYM WEB | Burak</p>
+          <p class="telif-yazisi">&copy; 2026 GYM WEB | Burak ALTUNDAŞ</p>
 
         </footer>
 

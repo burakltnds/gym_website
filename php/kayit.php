@@ -22,14 +22,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sorgu_alt->execute([$yeni_user_id]);
 
         echo "<script>
-                alert('Karakter oluşturuldu beyim! Aramıza hoş geldin.');
+                alert('Karakter oluşturuldu Aramıza hoş geldin.');
                 window.location.href = '../index.html';
               </script>";
     } catch (PDOException $e) {
         if ($e->getCode() == 23000) {
-            echo "<script>alert('Bu kullanıcı adı veya e-posta zaten kapılmış!'); history.back();</script>";
+            echo "<script>alert('Bu kullanıcı adı veya e-posta zaten alınmış!'); history.back();</script>";
         } else {
-            echo "Ekspertiz Hatası: " . $e->getMessage();
+            echo "Hata: " . $e->getMessage();
         }
     }
 }

@@ -46,7 +46,7 @@ try {
 
     <section class="antrenman-gunlugu">
         <header>
-            <h2>📅 Antrenman Takvimi ve Geçmişi</h2>
+            <h2>Antrenman Takvimi ve Geçmişi</h2>
         </header>
 
         <main>
@@ -77,7 +77,7 @@ try {
                         </article>
                     <?php endforeach; ?>
                 <?php else: ?>
-                    <p style="text-align:center; color: #777;">Henüz antrenman kaydın yok beyim, pas tutma! 🔥</p>
+                    <p style="text-align:center; color: #777;">Antrenman kaydı bulunamadı, harekete geçin !!!</p>
                 <?php endif; ?>
             </div>
         </main>
@@ -96,7 +96,7 @@ try {
               <img src="../asset/linkedin.png" alt="Linkedin">
             </a>
           </div>    
-          <p class="telif-yazisi">&copy; 2026 GYM WEB | Burak</p>
+          <p class="telif-yazisi">&copy; 2026 GYM WEB | Burak ALTUNDAŞ</p>
 
         </footer>
     <script src="../js/main.js"></script>

@@ -2,7 +2,6 @@
 session_start();
 include '../php/db.php';
 
-
 if (!isset($_SESSION['user_id'])) {
     header("Location: giris.html");
     exit();
@@ -209,7 +208,7 @@ function kasRengiHesapla($mevcut_xp, $max_xp = 100) {
               <img src="../asset/linkedin.png" alt="Linkedin">
             </a>
           </div>    
-          <p class="telif-yazisi">&copy; 2026 GYM WEB | Burak</p>
+          <p class="telif-yazisi">&copy; 2026 GYM WEB | Burak ALTUNDAŞ</p>
         </footer>
 
         <script src="../js/main.js"></script>

@@ -24,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             exit();
         } else {
-            echo "<script>alert('Kullanıcı adı veya şifre hatalı beyim!'); history.back();</script>";
+            echo "<script>alert('Kullanıcı adı veya şifre hatalı'); history.back();</script>";
         }
     } catch (PDOException $e) {
-        die("Ekspertiz hatası: " . $e->getMessage());
+        die("Hata: " . $e->getMessage());
     }
 }
 ?>

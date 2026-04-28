@@ -4,7 +4,7 @@ include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!isset($_SESSION['user_id'])) {
-        die("Hata: Oturum bulunamadı beyim, lütfen tekrar giriş yapın.");
+        die("Hata: Oturum bulunamadı, lütfen tekrar giriş yapın.");
     }
 
     $user_id = $_SESSION['user_id'];
@@ -66,10 +66,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if ($reset_sql != "") { $con->prepare($reset_sql)->execute([$user_id]); }
 
                     $yeni_ana_xp = 0;
-                    $seviye_mesaji = "TEBRİKLER BEYİM! " . strtoupper($ana_kas) . " Seviye Atladı!";
+                    $seviye_mesaji = "TEBRİKLER " . strtoupper($ana_kas) . " Seviye Atladı!";
                 } else {
                     $yeni_ana_xp = $ortalama;
-                    $seviye_mesaji = "Antrenman mühürlendi beyim! +$zorluk XP işlendi.";
+                    $seviye_mesaji = "Antrenman tamamlandı +$zorluk XP işlendi.";
                 }
 
 

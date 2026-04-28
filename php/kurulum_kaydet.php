@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($stmt->execute([$boy, $kilo, $hedef_kilo, $hedef_tur, $user_id])) {
             echo "<script>
-                    alert('Karakterin şekillendi beyim! Şimdi antrenman vakti.');
+                    alert('Karakterin şekillendi !!! Şimdi antrenman vakti.');
                     window.location.href = '../html/anasayfa.php';
                   </script>";
         } else {

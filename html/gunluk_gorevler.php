@@ -18,7 +18,7 @@ if (!isset($_SESSION['user_id'])) {
     
     <body>
         <nav id="navbar" class="navbar-ana">
-            <a href="../index.html" class="baslik">
+            <a href="anasayfa.php" class="baslik">
               <img src="../asset/dumbbell.png" alt="Logo" class="navbar-logo">
               <h1>GYM WEB</h1>
             </a>
@@ -168,7 +168,7 @@ if (!isset($_SESSION['user_id'])) {
               <img src="../asset/linkedin.png" alt="Linkedin">
             </a>
           </div>    
-          <p class="telif-yazisi">&copy; 2026 GYM WEB | Burak</p>
+          <p class="telif-yazisi">&copy; 2026 GYM WEB | Burak ALTUNDAŞ</p>
         </footer>
         
         <script src="../js/main.js"></script>

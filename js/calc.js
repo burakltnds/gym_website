@@ -6,7 +6,7 @@ function bmrHesapla() {
     const cinsiyet = bmrForm.querySelector('input[name="gender"]:checked').value;
 
     if (!boy || !kilo || !yas) {
-        alert("Ekspertiz için tüm veriler lazım beyim!");
+        alert("Lütfen bütün alanları doldurunuz !!!");
         return;
     }
 
@@ -27,7 +27,7 @@ function bmiHesapla() {
     const kilo = parseFloat(bmiForm.querySelector('#kilo').value);
 
     if (!boy || !kilo) {
-        alert("Boy ve kilo girmeden terazi çalışmaz!");
+        alert("Lütfen bütün alanları doldurunuz !!!");
         return;
     }
 
@@ -36,10 +36,10 @@ function bmiHesapla() {
     document.getElementById('bmiDeger').innerText = bmiDeger;
 
     let durum = "";
-    if (bmi < 18.5) durum = "Zayıf (Düşük Devir)";
-    else if (bmi < 25) durum = "Normal (İdeal)";
-    else if (bmi < 30) durum = "Kilolu (Ağır Yük)";
-    else durum = "Obez (Ekspertiz Şart)";
+    if (bmi < 18.5) durum = "Zayıf";
+    else if (bmi < 25) durum = "Normal";
+    else if (bmi < 30) durum = "Kilolu";
+    else durum = "Obez";
 
     document.getElementById('bmiDurum').innerText = durum;
 }
@@ -50,7 +50,7 @@ function yagHesapla() {
     const boyun = parseFloat(document.getElementById('fat_boyun').value);
 
     if (!boy || !bel || !boyun) {
-        alert("Mezurayı tam gezdir beyim, eksik bilgi var!");
+        alert("Lütfen bütün alanları doldurunuz !!!");
         return;
     }
 
@@ -60,7 +60,7 @@ function yagHesapla() {
     document.getElementById('fatDeger').innerText = yagOrani;
 
     let kategori = "";
-    if (yagOrani < 6) kategori = "Yarışma Formu";
+    if (yagOrani < 6) kategori = "Düşük";
     else if (yagOrani < 14) kategori = "Atletik";
     else if (yagOrani < 18) kategori = "Fit";
     else if (yagOrani < 25) kategori = "Ortalama";
